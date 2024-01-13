@@ -1,0 +1,78 @@
+@import '@fontsource/fira-mono';
+@import '@fontsource/kanit';
+
+
+:root {
+
+	--font-body: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,
+		Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,
+		apple color emoji,segoe ui emoji,Segoe UI Symbol,noto color emoji;
+	
+	--font-mono: 'Fira Mono', monospace;
+
+	/* --font-heading:  */
+
+	--background: #020617;
+	--foreground: #cbd5e1;
+	--primary: #ec4899;
+	--secondary: #020512;
+	--background-lighter: #141621;
+
+	color: var(--foreground);
+	font-family: var(--font-body);
+}
+
+::selection {
+	background: var(--primary);
+	color: var(--background);
+}
+
+body {
+	min-height: 100vh;
+	margin: 0;
+	background: var(--background);
+}
+
+p {
+	font-weight: 400;
+}
+
+p {
+	line-height: 1.5;
+}
+
+a {
+	color: var(--color-theme-1);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+h1 {
+	font-size: 2rem;
+	text-align: center;
+}
+
+h2 {
+	font-size: 1rem;
+}
+
+
+input,
+button {
+	font-size: inherit;
+	font-family: inherit;
+}
+
+button:focus:not(:focus-visible) {
+	outline: none;
+}
+
+@media (min-width: 720px) {
+	h1 {
+		font-size: 2.4rem;
+	}
+}
+
