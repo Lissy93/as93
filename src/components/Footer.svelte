@@ -1,7 +1,7 @@
 <footer>
   <a href="https://github.com/lissy93/as93">Awesome Source Ninety Three</a>
   | Licensed under
-  <a href="github.com/lissy93/as93/blob/HEAD/LICENSE">MIT</a> (C)
+  <a href="https://github.com/lissy93/as93/blob/HEAD/LICENSE">MIT</a> (C)
   <a href="https://aliciasykes.com">Alicia Sykes</a> 2024
 </footer>
 
