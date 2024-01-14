@@ -59,7 +59,11 @@
 		],
 		"datePublished": "2024-01-11T08:00:00+08:00",
 		"dateModified": new Date().toString() || "2024-01-11T09:20:00+08:00",
-		"author": { "@type": "Person", "name": "Alicia Sykes" },
+		"author": {
+			"@type": "Person",
+			"name": "Alicia Sykes",
+			"image": "https://as93.net/profile.jpg"
+		},
 		"publisher": {
 			"@type": "Organization",
 			"name": "AS93",

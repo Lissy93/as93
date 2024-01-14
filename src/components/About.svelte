@@ -47,7 +47,7 @@
     </div>
   </div>
   <div class="right">
-    <img class="pic" width="300" src="https://i.ibb.co/Nt2c57w/DSC-0095.jpg" alt="Alicia Sykes" />
+    <img class="pic" width="300" src="/profile.jpg" alt="Alicia Sykes" />
     <div class="links">
       {#each config.links as link}
         <a href={link.href}>{link.text}</a>

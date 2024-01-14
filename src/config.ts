@@ -4,52 +4,66 @@ export default {
   fullName: 'Alicia Sykes',
   projects: [
     {
-      name: 'dashy'
+      name: 'dashy',
+      description: 'A self-hostable server dashboard. Status-checking, widgets, themes, icon packs, UI editor, and more',
+      icon: 'https://i.ibb.co/yhbt6CY/dashy.png',
     },
     {
       name: 'personal-security-checklist',
       language: 'markdown',
+      description: 'The ultimate security checklist, 300+ tips for protecting your data online',
     },
     {
       name: 'web-check',
       language: 'React',
+      icon: 'https://raw.githubusercontent.com/Lissy93/web-check/master/public/android-chrome-192x192.png',
     },
     {
-      name: 'awesome-privacy'
+      name: 'awesome-privacy',
+      description: 'A curated list of apps, services and alternatives that respect your privacy',
     },
     {
-      name: 'portainer-templates'
+      name: 'portainer-templates',
+      icon: 'https://i.ibb.co/hMymwH0/portainer-templates-small.png',
     },
     {
-      name: 'adguardian-term'
+      name: 'adguardian-term',
+      icon: 'https://github.com/Lissy93/AdGuardian-Term/blob/website/static/favicon.png?raw=true',
     },
     {
-      name: 'dotfiles'
+      name: 'dotfiles',
+      icon: 'https://github.com/Lissy93/dotfiles/raw/master/.github/logo.png',
     },
     {
       name: 'twitter-sentiment-visualisation',
       title: 'Sentiment Sweep',
+      icon: 'https://github.com/Lissy93/twitter-sentiment-visualisation/blob/dev/client-side-source/graphics/web_hi_res_512.png?raw=true',
     },
     {
-      name: 'git-in'
+      name: 'git-in',
+      icon: 'https://raw.githubusercontent.com/Lissy93/git-into-open-source/main/.github/logo.png',
     },
     {
       name: 'email-comparison'
     },
     {
-      name: 'espanso-config'
+      name: 'espanso-config',
+      icon: 'https://i.ibb.co/0GTVC02/espanso-octocat.png',
     },
     {
-      name: 'my-website'
+      name: 'my-website',
+      description: 'A developer portfolio site, aggregating projects from GitHub and posts from RSS',
     },
     {
-      name: 'brewfile'
+      name: 'brewfile',
+      icon: 'https://i.ibb.co/LhhDNg7/brewfile-repo-logo.png',
     },
     {
       name: 'minimal-terminal-prompt'
     },
     {
-      name: 'bug-bounties'
+      name: 'bug-bounties',
+      icon: 'https://github.com/Lissy93/bug-bounties/blob/main/web/public/favicon.png?raw=true',
     },
     {
       name: 'hasami-shogi'
@@ -67,10 +81,12 @@ export default {
       name: 'all-the-countries'
     },
     {
-      name: 'go-apod'
+      name: 'go-apod',
+      icon: 'https://raw.githubusercontent.com/Lissy93/go-apod/master/static/assets/pwa/apple-touch-icon.png',
     },
     {
-      name: 'who-dat'
+      name: 'who-dat',
+      icon: 'https://i.ibb.co/J5r1zCP/who-dat-square.png',
     },
     {
       name: 'pax'
@@ -78,14 +94,17 @@ export default {
     {
       name: 'cso',
       title: 'CSO',
+      icon: 'https://i.ibb.co/d43WK4Z/snack-champ-robot-transparent.png',
     },
     {
       name: 'usermonkey',
       title: 'User Monkey',
+      icon: 'https://github.com/Lissy93/usermonkey/raw/master/DEMO/user-monkey/img/NavLogo.png',
     },
     {
       name: 'happy-app',
       language: 'Angular',
+      icon: 'https://i.ibb.co/mFrLzJ6/smiley-emoji.png',
     },
     {
       name: 'realtime-speech-analytics'
@@ -103,9 +122,11 @@ export default {
     {
       name: 'docker-tcpdump',
       title: 'Docker TCPDump',
+      icon: 'https://i.ibb.co/CvxTJ4Y/lissy93-docker-tcpdump.png',
     },
     {
-      name: 'study-time'
+      name: 'study-time',
+      icon: 'https://raw.githubusercontent.com/Lissy93/Study-Time/master/Graphics/hi-res-icon.png',
     },
     {
       name: 'minesweper'
@@ -114,7 +135,9 @@ export default {
       name: 'intern-magnet'
     },
     {
-      name: 'OLD_AdGuardian-Term'
+      name: 'OLD_AdGuardian-Term',
+      title: 'AdGuardian Term (Old)',
+      description: 'A terminal-based traffic an DNS monitor for your AdGuard Home instance',
     },
     {
       name: 'revision-quizzes'

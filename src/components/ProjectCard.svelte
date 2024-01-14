@@ -71,15 +71,24 @@
     box-shadow: 0 20px 25px -5px rgb(99 102 241 / .2), 0 8px 10px -6px rgb(99 102 241 / .2);
     border-color: #1e293b;
     text-decoration: none;
+    .left .emoji, .left img {
+      transform: scale(1.1);
+    }
+  }
+  &:focus {
+    outline: none;
+    border: 2px solid var(--primary);
   }
   .left {
     display: flex;
     align-items: center;
-    .emoji {
+    .emoji, img {
       font-size: 3rem;
+      width: 3.8rem;
       border-radius: 6px;
       padding: 0.25rem;
       background: var(--background-lighter);
+      transition: all cubic-bezier(.4,0,.2,1) .25s;
     }
   }
   .right {
