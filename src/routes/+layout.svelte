@@ -41,6 +41,9 @@
 	<!-- Hit counter -->
 	<script defer data-domain="as93.net" src="https://no-track.as93.net/js/script.js"></script>
 
+	<!-- Verification for SEO -->
+	<meta name="msvalidate.01" content="3B8A195ACDEB67AAA9AB3BBD8C37E3B6" />
+	
 	<!-- Schema.org Markup for Google -->
 	<script type="application/ld+json">
 		{
