@@ -1,6 +1,6 @@
 <h1 align="center">AS93</h1>
 <p align="center">
-<img src="https://github.com/Lissy93/as93/blob/main/static/favicon.png?raw=true" width="96" /><br />
+<a href="https://as93.net"><img src="https://github.com/Lissy93/as93/blob/main/static/favicon.png?raw=true" width="96" /></a><br />
 <i>Simple site to list your GitHub projects</i>
 <br />
 <b>🌐 <a href="https://as93.net/">as93.net</a></b><br />
