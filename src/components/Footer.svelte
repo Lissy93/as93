@@ -14,6 +14,7 @@
     padding: 1rem;
     font-size: 0.8rem;
     color: var(--foreground);
+    flex-wrap: wrap;
     a {
       color: var(--foreground);
       text-decoration: none;

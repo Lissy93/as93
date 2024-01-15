@@ -68,6 +68,9 @@ section {
   justify-content: center;
   gap: 1rem;
   box-shadow: 0 20px 20px -20px rgba(99, 102, 241, 0.2);
+  @media (max-width: 600px) {
+    flex-wrap: wrap;
+  }
   h3 {
     font-size: 1.5rem;
     margin: 0;

@@ -94,6 +94,7 @@ export default {
     {
       name: 'cso',
       title: 'CSO',
+      language: 'Solid',
       icon: 'https://i.ibb.co/d43WK4Z/snack-champ-robot-transparent.png',
     },
     {
