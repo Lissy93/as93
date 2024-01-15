@@ -59,7 +59,8 @@ export default {
       icon: 'https://i.ibb.co/LhhDNg7/brewfile-repo-logo.png',
     },
     {
-      name: 'minimal-terminal-prompt'
+      name: 'minimal-terminal-prompt',
+      icon: 'https://i.ibb.co/T050z33/bash-prompt.png',
     },
     {
       name: 'bug-bounties',

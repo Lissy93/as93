@@ -11,6 +11,40 @@
 
   let readmeToRender = '';
 
+
+  const convertReadme = (readme: string, owner = project.user, repo = project.name) => {
+  // Custom renderer
+  const renderer = new marked.Renderer();
+
+  // Original link renderer
+  const originalLinkRenderer = renderer.link;
+  renderer.link = (href, title, text) => {
+    if (!href.startsWith('http://') && !href.startsWith('https://') && !href.startsWith('#')) {
+      href = `https://github.com/${owner}/${repo}/blob/HEAD/${href}`;
+    }
+    return originalLinkRenderer.call(renderer, href, title, text);
+  };
+
+  // Original image renderer
+  const originalImageRenderer = renderer.image;
+  renderer.image = (href, title, text) => {
+    if (!href.startsWith('http://') && !href.startsWith('https://') && !href.startsWith('#')) {
+      href = `https://github.com/${owner}/${repo}/blob/HEAD/${href}`;
+    }
+    return originalImageRenderer.call(renderer, href, title, text);
+  };
+
+  // Add IDs to headings
+  renderer.heading = (text, level) => {
+    const escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
+    return `<h${level} id="${escapedText}">${text}</h${level}>`;
+  };
+
+  marked.setOptions({ renderer });
+
+  return marked(readme);
+};
+
   async function fetchReadme(owner: string, repo: string): Promise<string> {
     const url = `https://api.github.com/repos/${owner}/${repo}/readme`;
     const response = await fetch(url, {
@@ -25,9 +59,9 @@
 
   onMount(async () => {
     if (!readme) {
-      readmeToRender = await marked(await fetchReadme(project.user || 'lissy93', project.name));
+      readmeToRender = await convertReadme(await fetchReadme(project.user || 'lissy93', project.name));
     } else {
-      readmeToRender = await marked(readme);
+      readmeToRender = await convertReadme(readme);
     }
   });
 </script>
@@ -100,7 +134,7 @@
   
 
   <div class="markdown">
-    {@html marked(readme || '')}
+    {@html convertReadme(readme || '')}
   </div>
 
 
