@@ -34,7 +34,7 @@
         font-family: kanit, sans-serif;
         color: var(--primary);
         transition: all 0.5s ease-in-out;
-        text-shadow: 0 15px 15px rgba(99, 102, 241, 0.2);
+        text-shadow: 0 10px 10px rgba(99, 102, 241, 0.1);
         opacity: 0.85;
       }
       &:hover {

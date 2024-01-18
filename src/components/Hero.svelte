@@ -2,6 +2,7 @@
 <header>
   <h1>App Catalog</h1>
   <h2>Free & open source apps which respect your privacy</h2>
+  <h3>Coded with 🎔 by <a href="https://github.com/lissy93" target="_blank" rel="nofollow">Alicia Sykes</a></h3>
 </header>
 
 
@@ -14,15 +15,18 @@
     h1 {
       margin: 0;
       font-size: 4rem;
-      // background: -webkit-linear-gradient(60deg, var(--primary), #b748ec);
-      // -webkit-background-clip: text;
-      // -webkit-text-fill-color: transparent;
     }
     h2 {
       margin: 0;
       font-size: 1.5rem;
       font-weight: 400;
       text-align: center;
+    }
+    h3 {
+      margin: 0;
+      opacity: 0.75;
+      font-weight: 400;
+      color: var(--primary);
     }
   }
 </style>
