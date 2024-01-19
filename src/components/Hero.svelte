@@ -1,8 +1,15 @@
+<script lang="ts">
+  import Icon from './Icon.svelte';
+</script>
+
 
 <header>
   <h1>App Catalog</h1>
   <h2>Free & open source apps which respect your privacy</h2>
-  <h3>Coded with 🎔 by <a href="https://github.com/lissy93" target="_blank" rel="nofollow">Alicia Sykes</a></h3>
+  <h3>
+    Coded with
+    <Icon name="heart" width="1rem" height="1rem" color="var(--primary)" />
+    by <a href="https://github.com/lissy93" target="_blank" rel="nofollow">Alicia Sykes</a></h3>
 </header>
 
 
@@ -27,6 +34,9 @@
       opacity: 0.75;
       font-weight: 400;
       color: var(--primary);
+      display: flex;
+      gap: 0.3rem;
+      align-items: center;
     }
   }
 </style>
