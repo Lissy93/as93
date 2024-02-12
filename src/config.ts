@@ -10,7 +10,7 @@ export default {
     },
     {
       name: 'personal-security-checklist',
-      language: 'markdown',
+      language: 'qwik',
       description: 'The ultimate security checklist, 300+ tips for protecting your data online',
     },
     {
@@ -20,6 +20,7 @@ export default {
     },
     {
       name: 'awesome-privacy',
+      language: 'markdown',
       description: 'A curated list of apps, services and alternatives that respect your privacy',
     },
     {
@@ -44,7 +45,8 @@ export default {
       icon: 'https://raw.githubusercontent.com/Lissy93/git-into-open-source/main/.github/logo.png',
     },
     {
-      name: 'email-comparison'
+      name: 'email-comparison',
+      language: 'lit',
     },
     {
       name: 'espanso-config',
