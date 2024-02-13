@@ -37,6 +37,10 @@
       display: flex;
       gap: 0.3rem;
       align-items: center;
+      @media (max-width: 768px) {
+        display: inline;
+        text-align: center;
+      }
     }
   }
 </style>

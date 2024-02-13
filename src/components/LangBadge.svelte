@@ -18,7 +18,7 @@
   const badgeConfigs: BadgeConfigs = {
     // Programming Languages
     android: { name: 'Android', color: '3DDC84', icon: 'android' },
-    astro: { name: 'Astro', color: 'FF5D01', icon: 'astro' },
+    astro: { name: 'Astro', color: 'E83CB9', icon: 'astro' },
     alpine: { name: 'Alpine.js', color: '8BC0D0', icon: 'alpinedotjs' },
     angular: { name: 'Angular', color: 'DD0031', icon: 'angular' },
     babel: { name: 'Babel', color: 'F9DC3E', icon: 'babel' },

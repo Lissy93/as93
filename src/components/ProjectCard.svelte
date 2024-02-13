@@ -22,9 +22,16 @@
   }
 
   const cardClicked = async (event: MouseEvent) => {
-    event.preventDefault();
-    showModal = true;
-    readme = await fetchReadme(project.user || 'lissy93', project.name);
+    if (typeof window !== 'undefined' && window.innerWidth > 640) {
+      event.preventDefault();
+      showModal = true;
+      try {
+        readme = await fetchReadme(project.user || 'lissy93', project.name);
+      } catch (error) {
+        console.error(error);
+        window.location.href = `/${project.title}`;
+      }
+    }
   }
 
 </script>
