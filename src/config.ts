@@ -20,7 +20,6 @@ export default {
     },
     {
       name: 'awesome-privacy',
-      language: 'markdown',
       description: 'A curated list of apps, services and alternatives that respect your privacy',
     },
     {
