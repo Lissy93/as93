@@ -143,6 +143,10 @@ export default {
       description: 'A terminal-based traffic an DNS monitor for your AdGuard Home instance',
     },
     {
+      name: 'raid-calculator',
+      language: 'Van',
+    },
+    {
       name: 'revision-quizzes'
     },
   ],
