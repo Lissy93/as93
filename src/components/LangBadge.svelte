@@ -46,7 +46,7 @@
     javascript: { name: 'JavaScript', color: 'F7DF1E', icon: 'javascript' },
     julia: { name: 'Julia', color: '9558B2', icon: 'julia' },
     kotlin: { name: 'Kotlin', color: 'F18E33', icon: 'kotlin' },
-    lit: { name: 'Lit', color: '00ffff', icon: 'vite' },
+    lit: { name: 'Lit', color: '00ffff', icon: 'lit' },
     livescript: { name: 'LiveScript', color: '65ADF1', icon: 'nativescript' },
     node: { name: 'Node.js', color: '339933', icon: 'nodedotjs' },
     nim: { name: 'Nim', color: 'FFE953', icon: 'nim' },
@@ -70,8 +70,9 @@
     solid: { name: 'Solid', color: '2C4F7C', icon: 'solid' },
     swift: { name: 'Swift', color: 'F05138', icon: 'swift' },
     typescript: { name: 'TypeScript', color: '3178C6', icon: 'typescript' },
-    qwik: { name: 'Qwik', color: 'ac7ef4', icon: 'vite' },
+    qwik: { name: 'Qwik', color: 'ac7ef4', icon: 'qwik' },
     vue: { name: 'Vue.js', color: '4FC08D', icon: 'vuedotjs' },
+    van: { name: 'Van.js', color: 'F44336', icon: 'vitess' },
     webassembly: { name: 'WebAssembly', color: '654FF0', icon: 'webassembly' },
 
     // DevOps
