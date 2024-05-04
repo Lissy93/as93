@@ -35,7 +35,7 @@ export const makeProjectList = async (ghResponse: unknown): Promise<Project[]> =
   return config.projects.map((project: Project) => {
     // Find the project in the GitHub response
     const ghRepoData = ghResponse.find(
-      (ghProject: Project) => ghProject.name.toLocaleLowerCase() === project.name.toLocaleLowerCase()
+      (ghProject: Project) => ghProject?.name?.toLocaleLowerCase() === project.name.toLocaleLowerCase()
     ) || {};
     // Get the data we need from the GitHub response
     const repoData = convertGhResponse(ghRepoData);
