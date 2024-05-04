@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Project } from "../types/Project";
   import { formatDescription, formatTitle, formatStarCount } from '../helpers/attributes';
+  import config from '../config';
   import LangBadge from './LangBadge.svelte';
   import Modal from './Modal.svelte';
 
@@ -39,7 +40,7 @@
 
 <Modal bind:showModal project={project} readme={readme} />
 
-<a class="project" href={`/${project.title}`} on:click={cardClicked} >
+<a class="project" href={`https://github.com/${project.user || config.githubUser}/${project.name}`} on:click={cardClicked} >
   <div class="left">
     {#if project.icon}
       <img src={project.icon} alt={project.emoji} />
