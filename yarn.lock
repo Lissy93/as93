@@ -172,6 +172,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource/kanit/-/kanit-5.0.18.tgz#c43e06c98143749b2a5469057b35190276c25eb6"
   integrity sha512-mvC19JOSxT1sbWtk+aOKXTvqqhHVXP9eCMiZNkU66amZ5kdY0bcctx5mLD7MpvEmcOjBYxpZGiK1pT+5hwChcA==
 
+"@fontsource/poppins@^5.0.14":
+  version "5.0.14"
+  resolved "https://registry.yarnpkg.com/@fontsource/poppins/-/poppins-5.0.14.tgz#c7ede0730859dc0c1b85d1a92e4cb0f2223db0ae"
+  integrity sha512-nmM1zpPo3Uh4JcGAVSQuWaZNYh2FbbwWhZ5t6hRaynmJaNTBW85d3nEh9zMmzI0HX7X5xqQVdRHeDatKpOGsnA==
+
 "@humanwhocodes/config-array@^0.11.13":
   version "0.11.13"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.13.tgz#075dc9684f40a531d9b26b0822153c1e832ee297"
