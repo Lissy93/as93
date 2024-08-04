@@ -23,6 +23,11 @@ export default {
       description: 'A curated list of apps, services and alternatives that respect your privacy',
     },
     {
+      name: 'readme-contribs',
+      language: 'hono',
+      icon: 'https://github.com/Lissy93/readme-contribs/blob/main/public/favicon.png?raw=true',
+    },
+    {
       name: 'portainer-templates',
       icon: 'https://i.ibb.co/hMymwH0/portainer-templates-small.png',
     },
@@ -139,8 +144,9 @@ export default {
     },
     {
       name: 'OLD_AdGuardian-Term',
-      title: 'AdGuardian Term (Old)',
+      title: 'AdGuardian Term (V1)',
       description: 'A terminal-based traffic an DNS monitor for your AdGuard Home instance',
+      icon: 'https://camo.githubusercontent.com/ccd9f4a4b94978716a3aaab030d657be882235d83bb804dd577cc46be80b023e/68747470733a2f2f692e6962622e636f2f397068684d57502f6164677561726469616e2d676f2e706e67',
     },
     {
       name: 'raid-calculator',
