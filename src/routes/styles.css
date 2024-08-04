@@ -1,16 +1,19 @@
 @import '@fontsource/fira-mono';
 @import '@fontsource/kanit';
+@import '@fontsource/poppins';
 
 
 :root {
 
-	--font-body: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,
+	--font-body: Poppins, ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,
+		Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,
+		apple color emoji,segoe ui emoji,Segoe UI Symbol,noto color emoji;
+
+	--font-heading: Kanit, ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,
 		Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,
 		apple color emoji,segoe ui emoji,Segoe UI Symbol,noto color emoji;
 	
 	--font-mono: 'Fira Mono', monospace;
-
-	/* --font-heading:  */
 
 	--background: #020617;
 	--foreground: #cbd5e1;
@@ -31,6 +34,11 @@ body {
 	min-height: 100vh;
 	margin: 0;
 	background: var(--background);
+	font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-heading);
 }
 
 p {
