@@ -1,12 +1,20 @@
-
 <script>
-  import Icon from './Icon.svelte'
+  import Icon from './Icon.svelte';
+
+  let siteName = 'AS93';
+
+  if (typeof window !== 'undefined') {
+    const hostname = window.location.hostname;
+    if (hostname.endsWith('aliciasykes.com')) {
+      siteName = 'Alicia Sykes';
+    }
+  }
 </script>
 
 <section>
   <a class="home" href="/" title="Awesome Source Ninety Three">
     <Icon name="terminal" width="1.8rem" height="1.8rem" color="var(--primary)" />
-    <h1>AS93</h1>
+    <h1>{siteName}</h1>
   </a>
   <nav>
     <a href="https://aliciasykes.com/about">About</a>
@@ -31,7 +39,7 @@
       gap: 1rem;
       h1 {
         margin: 0;
-        font-family: kanit, sans-serif;
+        font-family: var(--font-heading);
         color: var(--primary);
         transition: all 0.5s ease-in-out;
         text-shadow: 0 10px 10px rgba(99, 102, 241, 0.1);

@@ -5,7 +5,7 @@
 
 <header>
   <h1>App Catalog</h1>
-  <h2>Free & open source apps which respect your privacy</h2>
+  <h2>I build free & open source apps which respect your privacy</h2>
   <h3>
     Coded with
     <Icon name="heart" width="1rem" height="1rem" color="var(--primary)" />
@@ -28,6 +28,7 @@
       font-size: 1.5rem;
       font-weight: 400;
       text-align: center;
+      font-family: var(--font-body);
     }
     h3 {
       margin: 0;
