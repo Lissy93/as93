@@ -41,6 +41,7 @@
     flutter: { name: 'Flutter', color: '02569B', icon: 'flutter' },
     go: { name: 'Go', color: '00ADD8', icon: 'go' },
     html: { name: 'HTML', color: 'E34F26', icon: 'html5' },
+    hono: { name: 'Hono', color: 'E36002', icon: 'hono' },
     haskell: { name: ' Haskell', color: '5D4F85', icon: ' haskell' },
     java: { name: 'Java', color: '007396', icon: 'mocha' },
     javascript: { name: 'JavaScript', color: 'F7DF1E', icon: 'javascript' },
