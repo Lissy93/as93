@@ -140,9 +140,6 @@ export default {
       name: 'minesweper'
     },
     {
-      name: 'intern-magnet'
-    },
-    {
       name: 'OLD_AdGuardian-Term',
       title: 'AdGuardian Term (V1)',
       description: 'A terminal-based traffic an DNS monitor for your AdGuard Home instance',
