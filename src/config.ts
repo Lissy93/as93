@@ -143,7 +143,7 @@ export default {
       name: 'OLD_AdGuardian-Term',
       title: 'AdGuardian Term (V1)',
       description: 'A terminal-based traffic an DNS monitor for your AdGuard Home instance',
-      icon: 'https://camo.githubusercontent.com/ccd9f4a4b94978716a3aaab030d657be882235d83bb804dd577cc46be80b023e/68747470733a2f2f692e6962622e636f2f397068684d57502f6164677561726469616e2d676f2e706e67',
+      icon: 'https://i.ibb.co/9phhMWP/adguardian-go.png',
     },
     {
       name: 'raid-calculator',
