@@ -19,6 +19,12 @@ export default {
       icon: 'https://raw.githubusercontent.com/Lissy93/web-check/master/public/android-chrome-192x192.png',
     },
     {
+      name: 'domain-locker',
+      language: 'Angular',
+      icon: 'https://github.com/Lissy93/domain-locker/blob/main/src/assets/icons/android-chrome-192x192.png?raw=true',
+      description: 'Domain name portfolio app for monitoring your domains',
+    },
+    {
       name: 'awesome-privacy',
       description: 'A curated list of apps, services and alternatives that respect your privacy',
     },
