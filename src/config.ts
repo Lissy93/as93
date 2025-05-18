@@ -34,6 +34,12 @@ export default {
       icon: 'https://github.com/Lissy93/readme-contribs/blob/main/public/favicon.png?raw=true',
     },
     {
+      name: 'ansibles',
+      language: 'ansible',
+      description: 'Full, automated, configurable server setup for optimum usability, security and best practices',
+      icon: 'https://storage.googleapis.com/as93-screenshots/project-logos/ansibles.png',
+    },
+    {
       name: 'portainer-templates',
       icon: 'https://i.ibb.co/hMymwH0/portainer-templates-small.png',
     },
