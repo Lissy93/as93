@@ -5,8 +5,13 @@ export default {
   projects: [
     {
       name: 'dashy',
+      title: 'Dashy',
       description: 'A self-hostable server dashboard. Status-checking, widgets, themes, icon packs, UI editor, and more',
       icon: 'https://i.ibb.co/yhbt6CY/dashy.png',
+      docker: 'https://hub.docker.com/r/lissy93/dashy',
+      mirror: 'https://codeberg.org/alicia/dashy',
+      docs: 'https://dashy.to/docs/',
+      color: '#00efe3',
     },
     {
       name: 'personal-security-checklist',

@@ -1,5 +1,6 @@
 <script lang="ts">
-  import ProjectInfo from '../../components/ProjectInfo.svelte';
+  import ProjectReadme from '../../components/ProjectReadme.svelte';
+  import ProjectHero from '../../components/ProjectHero.svelte';
   import type { Project } from '../../types/Project';
   import config from '../../config';
 
@@ -26,7 +27,8 @@
   $: jsonLdScript = generateJsonLd(data.repoDetails);
 </script>
 
-<ProjectInfo project={data.repoDetails} readme={data.readme} />
+<ProjectHero project={data.repoDetails} meta={data.meta} />
+<ProjectReadme project={data.repoDetails} readme={data.readme} />
 
 <svelte:element this="script" type="application/ld+json">
   {@html jsonLdScript}

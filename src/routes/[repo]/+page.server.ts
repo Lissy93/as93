@@ -21,6 +21,10 @@ const fetchReadme = async (owner: string, repo: string): Promise<string> => {
   return response.text();
 }
 
+const findRepoMeta = (repo: string): Project | undefined => {
+  return config.projects.find((project: Project) => project.name === repo);
+}
+
 export async function load({ params, fetch }) {
   const { repo } = params;
   const githubUser = config.githubUser;
@@ -34,5 +38,6 @@ export async function load({ params, fetch }) {
 
   const repoDetails: Project = convertGhResponse(await infoResponse.json());
   const readme = await fetchReadme(githubUser, repo);
-  return { repoDetails, readme };
+  const meta = findRepoMeta(repo);
+  return { repoDetails, readme, meta };
 }

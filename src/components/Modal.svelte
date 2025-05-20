@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Project } from '../types/Project';
-	import ProjectInfo from './ProjectInfo.svelte';
+	import ProjectReadme from './ProjectReadme.svelte';
 
 
 	export let showModal: boolean = false;
@@ -22,7 +22,7 @@
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
 	<div on:click|stopPropagation>
 		<slot />
-		<ProjectInfo project={project} readme={readme} />
+		<ProjectReadme project={project} readme={readme} />
 		<button autofocus on:click={() => dialog.close()}>Close</button>
 	</div>
 </dialog>
