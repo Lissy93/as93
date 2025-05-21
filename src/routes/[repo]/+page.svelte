@@ -1,10 +1,12 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import ProjectReadme from '../../components/ProjectReadme.svelte';
   import ProjectHero from '../../components/ProjectHero.svelte';
+  import NotFound from '../../components/NotFound.svelte';
   import type { Project } from '../../types/Project';
   import config from '../../config';
 
-  export let data: { repoDetails: Project, readme: string };
+  export let data: { repoDetails: Project, readme: string, meta: Record<string, unknown> };
 
   // Generates JSON-LD structured data for a given GitHub project
   function generateJsonLd(project: Project) {
@@ -25,10 +27,29 @@
   }
 
   $: jsonLdScript = generateJsonLd(data.repoDetails);
+
+  let notFound = false;
+
+  onMount(() => {
+    // Check if project is found, if not, set notFound to true to show 404
+    if (
+      (!data.repoDetails || Object.keys(data.repoDetails).length === 0) &&
+      (!data.meta || Object.keys(data.meta).length === 0)
+    ) {
+      notFound = true;
+    }
+  });
 </script>
 
-<ProjectHero project={data.repoDetails} meta={data.meta} />
-<ProjectReadme project={data.repoDetails} readme={data.readme} />
+{#if notFound}
+  <NotFound />
+{:else}
+  <ProjectHero project={data.repoDetails} meta={data.meta} />
+  {#if data.readme}
+    <ProjectReadme project={data.repoDetails} readme={data.readme} />
+  {/if}
+{/if}
+
 
 <svelte:element this="script" type="application/ld+json">
   {@html jsonLdScript}

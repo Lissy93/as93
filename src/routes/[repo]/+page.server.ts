@@ -31,13 +31,26 @@ export async function load({ params, fetch }) {
 
   const headers = GITHUB_TOKEN ? { 'Authorization': `token ${GITHUB_TOKEN}` } : undefined;
 
-  const infoResponse = await fetch(`https://api.github.com/repos/${githubUser}/${repo}`, { headers });
-  if (!infoResponse.ok) {
-    throw new Error(`Failed to fetch repo details: ${infoResponse.statusText}`);
-  }
+  const repoDetails = await fetch(`https://api.github.com/repos/${githubUser}/${repo}`, { headers })
+    .then(async (infoResponse) => {
+      if (!infoResponse.ok) {
+        console.error(`Failed to fetch repo details: ${infoResponse.statusText}`);
+        return {};
+      }
+      return convertGhResponse(await infoResponse.json());
+    })
+    .catch((error) => {
+      console.error(`Error fetching repo details: ${error.message}`);
+      return {};
+    });
 
-  const repoDetails: Project = convertGhResponse(await infoResponse.json());
-  const readme = await fetchReadme(githubUser, repo);
-  const meta = findRepoMeta(repo);
+  const readme = await fetchReadme(githubUser, repo)
+    .catch((error) => {
+      console.error(`Error fetching README: ${error.message}`);
+      return '';
+    });
+
+  const meta = findRepoMeta(repo) || {};
+
   return { repoDetails, readme, meta };
 }

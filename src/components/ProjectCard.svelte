@@ -23,16 +23,16 @@
   }
 
   const cardClicked = async (event: MouseEvent) => {
-    if (typeof window !== 'undefined' && window.innerWidth > 640) {
-      event.preventDefault();
-      showModal = true;
-      try {
-        readme = await fetchReadme(project.user || 'lissy93', project.name);
-      } catch (error) {
-        console.error(error);
-        window.location.href = `/${project.title}`;
-      }
-    }
+    // if (typeof window !== 'undefined' && window.innerWidth > 640) {
+    //   event.preventDefault();
+    //   showModal = true;
+    //   try {
+    //     readme = await fetchReadme(project.user || 'lissy93', project.name);
+    //   } catch (error) {
+    //     console.error(error);
+    //     window.location.href = `/${project.title}`;
+    //   }
+    // }
   }
 
 </script>
@@ -40,7 +40,7 @@
 
 <Modal bind:showModal project={project} readme={readme} />
 
-<a class="project" href={`https://github.com/${project.user || config.githubUser}/${project.name}`} on:click={cardClicked} >
+<a class="project" href={`/${project.name}`} on:click={cardClicked} >
   <div class="left">
     {#if project.icon}
       <img src={project.icon} alt={project.emoji} />

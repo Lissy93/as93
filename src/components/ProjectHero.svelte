@@ -10,13 +10,15 @@
     return typeof value === 'string' && value.trim() ? value : undefined;
   };
 
+  const repo = get('name') || project?.name;
   const name = get('title') || get('name') || project?.name;
   const description = get('description') ?? project?.description;
   const homepage = get('homepage') ?? project?.homepage;
-  const githubUrl = get('url') ?? (name ? `https://github.com/lissy93/${name}` : project?.url);
+  const githubUrl = (repo ? `https://github.com/lissy93/${repo}` : project?.url);
   const docsUrl = get('docs');
   const dockerUrl = get('docker');
   const mirrorUrl = get('mirror');
+  const crate = get('crate');
   const icon = get('icon');
   const screenshot = get('screenshot');
   const color = get('color');
@@ -69,6 +71,12 @@
             <span>CodeBerg Mirror</span>
           </a>
         {/if}
+        {#if crate}
+          <a href="{crate}" target="_blank" rel="noopener">
+            <Icon name="rust" width="20" height="20" />
+            <span>Crates.io</span>
+          </a>
+        {/if}
       </div>
     </div>
 
@@ -101,7 +109,8 @@ header {
   display: flex;
   flex-direction: column;
   .middle {
-    margin-top: 8%;
+    // margin-top: 8%;
+    min-height: 70vh;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -202,6 +211,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
   .right {
     align-items: center;

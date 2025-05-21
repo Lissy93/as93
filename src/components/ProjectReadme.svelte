@@ -11,7 +11,6 @@
 
   let readmeToRender = '';
 
-
   const convertReadme = (readme: string, owner = project.user, repo = project.name) => {
   // Custom renderer
   const renderer = new marked.Renderer();
@@ -119,20 +118,6 @@
     {/if}    
   </div>
 
-  <div class="cta">
-    <a href={project.url} target="_blank">
-      <Icon name="github" width="28" height="28" /> GitHub Repo
-    </a>
-    {#if project.homepage}
-      <a href={project.homepage} target="_blank">
-        <Icon name="website" width="28" height="28" />
-        Live Demo
-      </a>
-    {/if}
-  </div>
-
-  
-
   <div class="markdown">
     {@html convertReadme(readme || '')}
   </div>
@@ -142,6 +127,8 @@
 
 <style lang="scss">
   section {
+    max-width: 70rem;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -165,36 +152,8 @@
       }
     }
 
-    .cta {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      a {
-        text-decoration: none;
-        border: 3px solid var(--foreground);
-        padding: 0.5rem 1rem;
-        font-size: 1.8rem;
-        border-radius: 0.5rem;
-        min-width: 14rem;
-        transition: all ease-in-out .25s;
-        text-align: center;
-        font-weight: 700;
-        display: flex;
-        gap: 0.5rem;
-        justify-content: center;
-        align-items: center;
-        &:hover {
-          background: var(--background-lighter);
-          border-color: var(--primary);
-          box-shadow: 0 20px 25px -5px rgb(99 102 241 / .2), 0 8px 10px -6px rgb(99 102 241 / .2)
-        }
-      }
-    }
-
     .markdown {
       padding: 1rem 2rem;
-      border-top: 1px solid #1e293bcc;
       :global(td) {
         border: 1px solid #1e293bcc;
       }

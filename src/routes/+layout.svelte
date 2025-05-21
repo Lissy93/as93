@@ -80,29 +80,12 @@
 
 <div class="app">
 	<Nav />
-	<main>
-		<slot />
-	</main>
+	<slot />
 	<Footer />
 
 </div>
 
 <style>
 
-
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 70rem;
-		margin: 0 auto;
-		box-sizing: border-box;
-
-		@media (min-width: 1670px) {
-			max-width: 85rem;
-		}
-	}
 
 </style>
