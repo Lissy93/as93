@@ -2,31 +2,8 @@
 import { GITHUB_TOKEN } from '$env/static/private';
 
 import type { Project, GitHubRepository } from '../types/Project';
-import { findEmoji } from './attributes';
+import { findEmoji, convertGhResponse } from './attributes';
 import config from '../config';
-
-
-export const convertGhResponse = (ghRepoData: GitHubRepository): Project => {
-  return {
-    id: ghRepoData.id,
-    name: ghRepoData.name,
-    user: ghRepoData.owner?.login,
-    url: ghRepoData.html_url,
-    description: ghRepoData.description || '',
-    isFork: ghRepoData.fork,
-    createdAt: ghRepoData.created_at,
-    updatedAt: ghRepoData.pushed_at,
-    homepage: ghRepoData.homepage || '',
-    language: ghRepoData.language || '',
-    license: ghRepoData.license?.spdx_id || '',
-    size: ghRepoData.size,
-    stars: ghRepoData.stargazers_count,
-    forks: ghRepoData.forks_count,
-    issues: ghRepoData.open_issues_count,
-    topics: ghRepoData.topics || [],
-    archived: ghRepoData.archived,
-  }
-};
 
 export const makeProjectList = async (ghResponse: unknown): Promise<Project[]> => {
   if (!ghResponse || !Array.isArray(ghResponse)) return [];

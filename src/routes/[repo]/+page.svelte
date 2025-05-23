@@ -3,8 +3,12 @@
   import ProjectReadme from '../../components/ProjectReadme.svelte';
   import ProjectHero from '../../components/ProjectHero.svelte';
   import NotFound from '../../components/NotFound.svelte';
-  import type { Project } from '../../types/Project';
+  import type { GitHubRepository, Project } from '../../types/Project';
+  import { findEmoji, convertGhResponse } from '../../helpers/attributes';
   import config from '../../config';
+	import { page } from '$app/stores';
+  import { fetchRepoDetails, fetchReadme, findRepoMeta } from './../../helpers/fetchRepo';
+	// import { convertGhResponse } from '../../helpers/fetchData';
 
   export let data: { repoDetails: Project, readme: string, meta: Record<string, unknown> };
 
@@ -38,7 +42,20 @@
     ) {
       notFound = true;
     }
+
+    // Fetch (or attempt to) the most-up-to-date repo details
+    fetchRepoDetails(config.githubUser, $page.params.repo, fetch)
+        .then((res) => {
+          if (res && res?.id) {
+            data.repoDetails = res as Project;
+            notFound = false;
+          }
+        })
+        .catch((err) => {
+          console.error('Error fetching repo details', err);
+        });
   });
+
 </script>
 
 {#if notFound}

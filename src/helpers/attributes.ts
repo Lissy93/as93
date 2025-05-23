@@ -1,4 +1,4 @@
-
+import type { GitHubRepository, Project } from '../types/Project';
 
 export const findEmoji = (projectDescription: string | undefined, defaultEmoji: string = '*️⃣'): string => {
   // If there's no description, return the default emoji
@@ -65,4 +65,26 @@ export const formatTimeAgo = (inputDate: string) => {
     }
   }
   return `${Math.floor(seconds)} seconds ago`;
+};
+
+export const convertGhResponse = (ghRepoData: GitHubRepository): Project => {
+  return {
+    id: ghRepoData.id,
+    name: ghRepoData.name,
+    user: ghRepoData.owner?.login,
+    url: ghRepoData.html_url,
+    description: ghRepoData.description || '',
+    isFork: ghRepoData.fork,
+    createdAt: ghRepoData.created_at,
+    updatedAt: ghRepoData.pushed_at,
+    homepage: ghRepoData.homepage || '',
+    language: ghRepoData.language || '',
+    license: ghRepoData.license?.spdx_id || '',
+    size: ghRepoData.size,
+    stars: ghRepoData.stargazers_count,
+    forks: ghRepoData.forks_count,
+    issues: ghRepoData.open_issues_count,
+    topics: ghRepoData.topics || [],
+    archived: ghRepoData.archived,
+  }
 };
