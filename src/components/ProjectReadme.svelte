@@ -10,6 +10,7 @@
   export let readme: string | undefined;
 
   let readmeToRender = '';
+  let mdMode = true;
 
   const convertReadme = (readme: string, owner = project.user, repo = project.name) => {
   // Custom renderer
@@ -56,12 +57,17 @@
     return await response.text();
   }
 
+  const isMarkdown = (readme: string) => {
+    const markdownIndicators = ['## ', '![', '](', '<img', '<details', '<!--', '> _**['];
+    return markdownIndicators.some(indicator => (readme || '').includes(indicator));
+  };
+
   onMount(async () => {
     if (!readme) {
-      readmeToRender = await convertReadme(await fetchReadme(project.user || 'lissy93', project.name));
-    } else {
-      readmeToRender = await convertReadme(readme);
+      readme = await fetchReadme(project.user || 'lissy93', project.name);
     }
+    mdMode = isMarkdown(readme);
+    readmeToRender = await convertReadme(readme);
   });
 </script>
 
@@ -118,10 +124,16 @@
     {/if}    
   </div>
 
-  <div class="markdown">
-    {@html convertReadme(readme || '')}
-  </div>
-
+  <!-- Render the readme -->
+  {#if mdMode}
+    <div class="markdown">
+      {@html convertReadme(readme || '')}
+    </div>
+  {:else}
+    <pre class="plain-text">
+      { readme }
+    </pre>
+  {/if}
 
 </section>
 
@@ -150,6 +162,12 @@
           
         }
       }
+    }
+
+    .plain-text {
+      padding: 0 2rem;
+      overflow-x: auto;
+      margin: 0;
     }
 
     .markdown {

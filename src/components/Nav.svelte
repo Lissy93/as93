@@ -8,6 +8,9 @@
     if (hostname.endsWith('aliciasykes.com')) {
       siteName = 'Alicia Sykes';
     }
+    else if (hostname.endsWith('lissy93.github.io')) {
+      siteName = 'Lissy93';
+    }
   }
 </script>
 
