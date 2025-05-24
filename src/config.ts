@@ -117,7 +117,10 @@ export default {
     },
     {
       name: 'email-comparison',
+      icon: 'https://storage.googleapis.com/as93-screenshots/project-logos/email-comparison.png',
+      screenshot: 'https://storage.googleapis.com/as93-screenshots/project-screenshots/email-comparison-scr.png',
       language: 'lit',
+      color: '#fedf2d',
     },
     {
       name: 'espanso-config',
@@ -127,6 +130,8 @@ export default {
     {
       name: 'my-website',
       description: 'A developer portfolio site, aggregating projects from GitHub and posts from RSS',
+      screenshot: 'https://storage.googleapis.com/as93-screenshots/project-screenshots/my-website.png',
+      color: '#7683ff',
     },
     {
       name: 'brewfile',
@@ -137,6 +142,8 @@ export default {
     {
       name: 'minimal-terminal-prompt',
       icon: 'https://i.ibb.co/T050z33/bash-prompt.png',
+      screenshot: 'https://github.com/Lissy93/minimal-terminal-prompt/blob/master/demo.gif?raw=true',
+      color: '#707379',
     },
     {
       name: 'bug-bounties',
@@ -150,7 +157,9 @@ export default {
       name: 'hasami-shogi'
     },
     {
-      name: 'anti-theft-charge'
+      name: 'anti-theft-charge',
+      screenshot: 'https://github.com/Lissy93/anti-theft-charge/blob/master/demo/atc-initial-app-start.gif?raw=true',
+      color: '#fcbf05',
     },
     {
       name: 'sentiment-analysis'

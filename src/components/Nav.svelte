@@ -21,8 +21,9 @@
   </a>
   <nav>
     <a href="https://aliciasykes.com/about">About</a>
+    <a href="https://cv.aliciasykes.com">Resume</a>
     <a href="https://aliciasykes.com/blog">Blog</a>
-    <a href="https://aliciasykes.com/projects">Projects</a>
+    <!-- <a href="https://aliciasykes.com/projects">Projects</a> -->
     <a href="https://aliciasykes.com/contact">Contact</a>
   </nav>
 </section>
