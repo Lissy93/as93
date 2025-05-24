@@ -10,6 +10,13 @@
     return typeof value === 'string' && value.trim() ? value : undefined;
   };
 
+  const putCommasInBigNumber = (num: string | number): string => {
+    if (typeof num !== 'number' || isNaN(num)) {
+      return '';
+    }
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  };
+
   const repo = get('name') || project?.name;
   const name = (get('title') || get('name') || project?.name || 'Untitled').replaceAll('-', ' ');
   const description = get('description') ?? project?.description;
@@ -22,6 +29,15 @@
   const icon = get('icon');
   const screenshot = get('screenshot');
   const color = get('color');
+
+  const license = get('license') || project?.license || 'MIT';
+  const stars = putCommasInBigNumber(get('stars') || project?.stars || 0);
+  const author = get('author') || project?.user || 'Lissy93';
+  const language = get('language') || project?.language || '';
+  const isArchived = get('archived') || project?.archived || false;
+  
+  console.log(project)
+
 </script>
 
 <header style={color ? `--primary: ${color}` : ''}>
@@ -88,12 +104,49 @@
       {/if}
   </div>
 
-  <p class="license">
-    Free & Open Source |
-    Licensed under 
-    <a href="{githubUrl}/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a>
-    &copy; 2025 <a href="https://aliciasykes.com">Alicia Sykes</a>
-  </p>
+
+  <div class="bottom">
+
+    <div class="chips">
+      <ul>
+        {#if license}
+          <li>
+            <Icon name="license" width="14" height="14" />
+            License: {license}
+          </li>
+        {/if}
+        {#if stars}
+          <li>
+            <Icon name="star" width="14" height="14" />
+            Stars: {stars}
+          </li>
+        {/if}
+        {#if author}
+          <li>
+            <Icon name="user" width="14" height="14" />
+            Author: {author}
+          </li>
+        {/if}
+        {#if language}
+          <li>
+            <Icon name="language" width="18" height="14" />
+            Language: {language}
+          </li>
+        {/if}
+        {#if isArchived}
+          <li class="warn">Archived</li>
+        {/if}
+        
+      </ul>
+    </div>
+    <p class="license">
+      Free & open source, forever.
+      <a href="{githubUrl}" target="_blank" rel="noopener">{name}</a>
+      is licensed under 
+      {license}
+      &copy; 2025 <a href="https://aliciasykes.com" target="_blank" rel="noopener">Alicia Sykes</a>
+    </p>
+  </div>
 </header>
 
 
@@ -109,12 +162,36 @@ header {
   display: flex;
   flex-direction: column;
   .middle {
-    // margin-top: 8%;
     min-height: 70vh;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 2rem;
+  }
+
+  .chips {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 1rem;
+      li {
+        color: var(--foreground);
+        border: 2px solid var(--foreground-transparent);
+        border-radius: 4px;
+        font-size: 0.8rem;
+        opacity: 0.7;
+        padding: 0.2rem 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        &.warn {
+          color: var(--warning);
+          border-color: var(--warning);
+        }
+      }
+    }
   }
   
   h1 {
@@ -186,14 +263,9 @@ header {
     }
     
   }
-  .license {
-    color: var(--grey);
-    font-family: var(--font-body);
-    margin: 1rem auto;
-    font-size: 0.75rem;
-    opacity: 0.5;
-    text-align: center;
-
+  .bottom {
+    display: flex;
+    flex-direction: column;
     @media (min-width: 800px) {
       bottom: 1rem;
       position: absolute;
@@ -202,6 +274,15 @@ header {
       display: flex;
       justify-content: center;
     }
+  }
+  .license {
+    color: var(--grey);
+    font-family: var(--font-body);
+    margin: 1rem auto;
+    font-size: 0.75rem;
+    opacity: 0.5;
+    text-align: center;
+
     a {
       color: var(--grey);
       text-decoration: none;
@@ -228,6 +309,7 @@ header {
   .screenshot {
     width: 100%;
     height: fit-content;
+    max-height: 650px;
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }

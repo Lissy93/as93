@@ -21,6 +21,10 @@
 	--secondary: #020512;
 	--background-lighter: #141621;
 
+	--warning: #f59e0b;
+
+	--foreground-transparent: #cbd5e13b;
+
 	color: var(--foreground);
 	font-family: var(--font-body);
 }
