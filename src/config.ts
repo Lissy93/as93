@@ -112,6 +112,8 @@ export default {
     {
       name: 'git-in',
       icon: 'https://raw.githubusercontent.com/Lissy93/git-into-open-source/main/.github/logo.png',
+      screenshot: 'https://storage.googleapis.com/as93-screenshots/project-screenshots/git-in.png',
+      color: '#d494ff',
     },
     {
       name: 'email-comparison',
@@ -119,7 +121,8 @@ export default {
     },
     {
       name: 'espanso-config',
-      icon: 'https://i.ibb.co/0GTVC02/espanso-octocat.png',
+      icon: 'https://storage.googleapis.com/as93-screenshots/project-logos/espanso.png',
+      color: '#00ab91',
     },
     {
       name: 'my-website',
@@ -127,7 +130,9 @@ export default {
     },
     {
       name: 'brewfile',
-      icon: 'https://i.ibb.co/LhhDNg7/brewfile-repo-logo.png',
+      icon: 'https://storage.googleapis.com/as93-screenshots/project-logos/brewfile.png',
+      screenshot: 'https://storage.googleapis.com/as93-screenshots/project-screenshots/brewfile.png',
+      color: '#fbb040',
     },
     {
       name: 'minimal-terminal-prompt',
@@ -171,9 +176,11 @@ export default {
     },
     {
       name: 'cso',
-      title: 'CSO',
+      title: 'Chief Snack Officer',
       language: 'Solid',
-      icon: 'https://i.ibb.co/d43WK4Z/snack-champ-robot-transparent.png',
+      icon: 'https://storage.googleapis.com/as93-screenshots/project-logos/cso.png',
+      screenshot: 'https://storage.googleapis.com/as93-screenshots/project-screenshots/cso.gif',
+      color: '#e2304d',
     },
     {
       name: 'usermonkey',
@@ -183,7 +190,9 @@ export default {
     {
       name: 'happy-app',
       language: 'Angular',
-      icon: 'https://i.ibb.co/mFrLzJ6/smiley-emoji.png',
+      icon: 'https://storage.googleapis.com/as93-screenshots/project-logos/happy-app.png',
+      screenshot: 'https://raw.githubusercontent.com/Lissy93/happy-app/master/docs/screen-shot-1.png',
+      color: '#ffcd4c',
     },
     {
       name: 'realtime-speech-analytics'
@@ -201,24 +210,34 @@ export default {
     {
       name: 'docker-tcpdump',
       title: 'Docker TCPDump',
-      icon: 'https://i.ibb.co/CvxTJ4Y/lissy93-docker-tcpdump.png',
+      icon: 'https://storage.googleapis.com/as93-screenshots/project-logos/docker-tcp-dump.png',
+      color: '#039cfd',
     },
     {
       name: 'study-time',
       icon: 'https://raw.githubusercontent.com/Lissy93/Study-Time/master/Graphics/hi-res-icon.png',
+      screenshot: 'https://storage.googleapis.com/as93-screenshots/project-screenshots/study-time.png',
+      color: '#4093eb',
     },
     {
-      name: 'minesweper'
+      name: 'minesweper',
+      icon: 'https://storage.googleapis.com/as93-screenshots/project-logos/minesweeper.png',
+      color: '#E83046',
     },
     {
       name: 'OLD_AdGuardian-Term',
       title: 'AdGuardian Term (V1)',
       description: 'A terminal-based traffic an DNS monitor for your AdGuard Home instance',
-      icon: 'https://i.ibb.co/9phhMWP/adguardian-go.png',
+      icon: 'https://storage.googleapis.com/as93-screenshots/project-logos/adguardian-go.png',
+      screenshot: 'https://storage.googleapis.com/as93-screenshots/project-screenshots/adguradian-go.png',
+      color: '#31d891',
     },
     {
       name: 'raid-calculator',
       language: 'Van',
+      icon: 'https://storage.googleapis.com/as93-screenshots/project-screenshots/raid-caclularor.png',
+      screenshot: 'https://raw.githubusercontent.com/Lissy93/raid-calculator/refs/heads/main/public/banner.png',
+      color: '#dfc01a',
     },
     {
       name: 'revision-quizzes'

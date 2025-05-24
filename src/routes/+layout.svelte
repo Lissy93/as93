@@ -81,7 +81,7 @@
 <div class="app">
 	<Nav />
 	<slot />
-	<Footer />
+	<!-- <Footer /> -->
 
 </div>
 

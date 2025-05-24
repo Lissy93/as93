@@ -107,6 +107,7 @@
 
   <div class="bottom">
 
+    {#if (language || (stars && stars !== '0') || isArchived)}
     <div class="chips">
       <ul>
         {#if license}
@@ -115,7 +116,7 @@
             License: {license}
           </li>
         {/if}
-        {#if stars}
+        {#if stars && stars !== '0'}
           <li>
             <Icon name="star" width="14" height="14" />
             Stars: {stars}
@@ -136,9 +137,9 @@
         {#if isArchived}
           <li class="warn">Archived</li>
         {/if}
-        
       </ul>
     </div>
+    {/if}
     <p class="license">
       Free & open source, forever.
       <a href="{githubUrl}" target="_blank" rel="noopener">{name}</a>
@@ -176,6 +177,7 @@ header {
       padding: 0;
       display: flex;
       gap: 1rem;
+      justify-content: center;
       li {
         color: var(--foreground);
         border: 2px solid var(--foreground-transparent);
