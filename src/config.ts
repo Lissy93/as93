@@ -88,7 +88,6 @@ export default {
       language: 'Rust',
       icon: 'https://storage.googleapis.com/as93-screenshots/project-logos/adguardian.png',
       screenshot: 'https://storage.googleapis.com/as93-screenshots/project-screenshots/adguardian.gif',
-
       docker: 'https://hub.docker.com/r/lissy93/adguardian',
       mirror: 'https://codeberg.org/alicia/adguardian',
       docs: 'https://lissy93.github.io/AdGuardian-Term/adguardian/index.html',
@@ -250,6 +249,15 @@ export default {
     },
     {
       name: 'revision-quizzes'
+    },
+    {
+      name: 'as93',
+      title: 'lissy93.github.io',
+      language: 'Svelte',
+      description: 'You\'re looking at it! A project as a fallback for any repos which do not have a GitHub pages homepage',
+      icon: 'https://storage.googleapis.com/as93-screenshots/project-logos/heart.png',
+      screenshot: 'https://storage.googleapis.com/as93-screenshots/project-screenshots/as93.png',
+      color: '#f55064',
     },
   ],
   socials: [

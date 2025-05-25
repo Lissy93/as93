@@ -12,7 +12,7 @@
   let readmeToRender = '';
   let mdMode = true;
 
-  const convertReadme = (readme: string, owner = project.user, repo = project.name) => {
+  const convertReadme = async (readme: string, owner = project.user, repo = project.name) => {
   // Custom renderer
   const renderer = new marked.Renderer();
 
@@ -42,7 +42,30 @@
 
   marked.setOptions({ renderer });
 
-  return marked(readme);
+  marked.use({
+    walkTokens(tok) {
+      if (
+        (tok.type === 'link' || tok.type === 'image') &&
+        typeof tok.href === 'string' &&
+        !/^https?:\/\//.test(tok.href)
+      ) {
+        // strip leading slash or dot-slash:
+        const path = tok.href.replace(/^\/|^\.\//, '');
+        tok.href = `https://github.com/${owner}/${repo}/blob/master/${path}`;
+      }
+    }
+  });
+
+  const html = await marked(readme);
+
+  const sanitizedHtml = html.replace(
+    /<img\s+[^>]*src="(?!https?:\/\/)[^"]*"[^>]*>/gi,
+    ''
+  );
+
+  return sanitizedHtml;
+
+  // return marked(readme);
 };
 
   async function fetchReadme(owner: string, repo: string): Promise<string> {
@@ -127,7 +150,11 @@
   <!-- Render the readme -->
   {#if mdMode}
     <div class="markdown">
-      {@html convertReadme(readme || '')}
+      {#await convertReadme(readme || '') then renderedReadme}
+        {@html renderedReadme}
+      {:catch error}
+        <p>Error rendering README: {error.message}</p>
+      {/await}
     </div>
   {:else}
     <pre class="plain-text">

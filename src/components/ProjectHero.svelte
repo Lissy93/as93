@@ -18,7 +18,7 @@
   };
 
   const repo = get('name') || project?.name;
-  const name = (get('title') || get('name') || project?.name || 'Untitled').replaceAll('-', ' ');
+  const name = get('title') || (get('name') || project?.name || 'Untitled').replaceAll('-', ' ');
   const description = get('description') ?? project?.description;
   const homepage = get('homepage') ?? project?.homepage;
   const githubUrl = (repo ? `https://github.com/lissy93/${repo}` : project?.url);
@@ -203,7 +203,7 @@ header {
     font-weight: 600;
     font-family: var(--font-heading);
     text-shadow: 2px 2px 3px #000;
-    text-transform: capitalize;
+    // text-transform: capitalize;
   }
   .subtitle {
     font-size: 1.2rem;

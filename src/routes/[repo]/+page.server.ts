@@ -1,11 +1,10 @@
 import { GITHUB_TOKEN } from '$env/static/private';
-import type { Project } from '../../types/Project';
-import { convertGhResponse } from '../../helpers/attributes';
 
 import { fetchRepoDetails, fetchReadme, findRepoMeta } from './../../helpers/fetchRepo';
 
 import config from '../../config';
 
+export const prerender = true;
 
 export async function load({ params, fetch }) {
   const { repo } = params;
