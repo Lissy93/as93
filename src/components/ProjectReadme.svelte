@@ -64,8 +64,6 @@
   );
 
   return sanitizedHtml;
-
-  // return marked(readme);
 };
 
   async function fetchReadme(owner: string, repo: string): Promise<string> {
