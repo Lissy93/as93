@@ -35,8 +35,6 @@
   const author = get('author') || project?.user || 'Lissy93';
   const language = get('language') || project?.language || '';
   const isArchived = get('archived') || project?.archived || false;
-  
-  console.log(project)
 
 </script>
 

@@ -23,9 +23,6 @@ async function getGithubSlugs() {
 
 const githubSlugs = await getGithubSlugs();
 
-console.log('Slugs: ', githubSlugs);
-
-
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess: vitePreprocess(),
@@ -37,7 +34,7 @@ const config = {
 		prerender: {
 			entries: githubSlugs,
 		}
-	}
+	},
 };
 
 export default config;
