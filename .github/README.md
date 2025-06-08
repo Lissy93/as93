@@ -1,10 +1,20 @@
-<h1 align="center">AS93</h1>
+<h1 align="center">Lissy93's Project Catalogue</h1>
 <p align="center">
-<a href="https://as93.net"><img src="https://github.com/Lissy93/as93/blob/main/static/favicon.png?raw=true" width="96" /></a><br />
-<i>Simple site to list your GitHub projects</i>
+<a href="https://as93.net"><img src="https://github.com/Lissy93/as93/blob/main/static/favicon.png?raw=true" width="32" /></a><br />
+<i>Simple portfolio site, backed by GitHub API</i>
 <br />
-<b>🌐 <a href="https://as93.net/">as93.net</a></b><br />
+<b>🌐 <a href="https://lissy93.github.io">lissy93.github.io</a></b><br />
 </p>
+
+---
+
+## About
+A simple site which lists all of your GitHub projects, and creates a dedicated homepage for each of your repos.<br>
+Useful as an auto-generated fallback for all of your apps which don't yet have a dedicated website/landing page.
+
+E.g.
+- `[your-username].github.io` - List of all your projects
+- `[your-username].github.io/[repo]` - Homepage for each repo
 
 ---
 
@@ -25,7 +35,8 @@ Or simply import your fork of the project into Netlify or Vercel - so easy!
 ---
 
 ## Configuring
-All user-related settings goes in the `config.ts` file.
+All user-related settings goes in the [`config.ts`](https://github.com/Lissy93/as93/blob/main/src/config.ts) file.
+Add your username there, and optionally add any other details to augment repo listings with custom meta.
 Other than that, the only other thing you need is a GitHub API key in `GITHUB_TOKEN` env var (to avoid being limited while fetching repos)
 
 ---
@@ -61,17 +72,13 @@ The app is built with Svelte + SvelteKit, and uses TypeScript and SCSS
 
 ##### Contributors
 
-[![Contributors](https://contrib.rocks/image?repo=lissy93/as93)](https://github.com/Lissy93/as93/graphs/contributors)
-
-<!-- readme: contributors -start -->
-<!-- readme: contributors -end -->
+![contributors badge](https://readme-contribs.as93.net/contributors/lissy93/as93)
 
 ##### Sponsors
 
 Thank you so so much to everyone who [sponsors me on GitHub](https://github.com/sponsors/lissy93) 💖
 
-<!-- readme: sponsors -start -->
-<!-- readme: sponsors -end -->
+![sponsors badge](https://readme-contribs.as93.net/sponsors/lissy93)
 
 ---
 
