@@ -40,16 +40,16 @@ jobs:
       #     publish_dir: ./build
       #     publish_branch: gh-pages
 
-      - name: Deploy to build-output branch
+      - name: Deploy to gh-pages branch
         run: |
           git config --global user.name "liss-bot"
           git config --global user.email "alicia-gh-bot@mail.as93.net"
-          git fetch origin build-output || true
+          git fetch origin gh-pages || true
           git switch --orphan temp-deploy
           git reset
           cp -r build/* .
           touch .nojekyll
           git add .
           git commit -m "Deploy static site"
-          git push --force origin temp-deploy:build-output
+          git push --force origin temp-deploy:gh-pages
     
