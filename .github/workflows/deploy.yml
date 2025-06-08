@@ -40,16 +40,16 @@ jobs:
           publish_dir: ./build
           publish_branch: gh-pages
 
-      # - name: Deploy to gh-pages branch
-      #   run: |
-      #     git config --global user.name "github-actions"
-      #     git config --global user.email "github-actions@github.com"
-      #     git fetch origin gh-pages || true
-      #     git switch --orphan temp-deploy
-      #     git reset
-      #     cp -r build/* .
-      #     touch .nojekyll
-      #     git add .
-      #     git commit -m "Deploy static site"
-      #     git push --force origin temp-deploy:gh-pages
+      - name: Deploy to output branch
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git fetch origin output || true
+          git switch --orphan temp-deploy
+          git reset
+          cp -r build/* .
+          touch .nojekyll
+          git add .
+          git commit -m "Deploy static site"
+          git push --force origin temp-deploy:gh-pages
     
