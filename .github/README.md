@@ -28,9 +28,10 @@ E.g.
 ---
 
 ## Deployment
-Follow the [Development](#development) instructions above.<br> 
-When you're ready to deploy, run `yarn build` and upload the `dist/` to any CDN, static hosting provider or web server.<br>
-Or simply import your fork of the project into Netlify or Vercel - so easy!
+Fork the repo, and rename to your username (e.g. `octocat.github.io`).<br>
+GitHub Actions will automatically build and publish the site to your `https://<your-username>.github.io` page.<br>
+
+For manual deployment, follow the [Development](#development) instructions above, then run `yarn build` and upload the `dist/` to any CDN, static hosting provider or web server.
 
 ---
 
