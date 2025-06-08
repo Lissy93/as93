@@ -33,24 +33,23 @@ jobs:
         run: |
           echo "This is the compiled static site for https://lissy93.github.io" > build/README.txt
 
-      # - name: Deploy to GitHub Pages
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     publish_dir: ./build
-      #     publish_branch: gh-pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          publish_branch: gh-pages
 
-      - name: Deploy to gh-pages branch
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          git fetch origin gh-pages || true
-          git switch --orphan temp-deploy
-          git reset
-          cp -r build/* .
-          echo "Built by GitHub Actions" > README.txt
-          touch .nojekyll
-          git add .
-          git commit -m "Deploy static site"
-          git push --force origin temp-deploy:gh-pages
+      # - name: Deploy to gh-pages branch
+      #   run: |
+      #     git config --global user.name "github-actions"
+      #     git config --global user.email "github-actions@github.com"
+      #     git fetch origin gh-pages || true
+      #     git switch --orphan temp-deploy
+      #     git reset
+      #     cp -r build/* .
+      #     touch .nojekyll
+      #     git add .
+      #     git commit -m "Deploy static site"
+      #     git push --force origin temp-deploy:gh-pages
     
