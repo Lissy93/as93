@@ -1,0 +1,257 @@
+{
+  ".svelte-kit/generated/client-optimized/app.js": {
+    "dynamicImports": [
+      ".svelte-kit/generated/client-optimized/nodes/0.js",
+      ".svelte-kit/generated/client-optimized/nodes/1.js",
+      ".svelte-kit/generated/client-optimized/nodes/2.js",
+      ".svelte-kit/generated/client-optimized/nodes/3.js"
+    ],
+    "file": "_app/immutable/entry/app.X6-y2vZW.js",
+    "imports": [
+      "_0HuHagjb.js",
+      "_NSV_DA2K.js",
+      "_HdumK7dF.js"
+    ],
+    "isEntry": true,
+    "src": ".svelte-kit/generated/client-optimized/app.js"
+  },
+  ".svelte-kit/generated/client-optimized/nodes/0.js": {
+    "assets": [
+      "_app/immutable/assets/fira-mono-cyrillic-ext-400-normal.dOGCK5uJ.woff2",
+      "_app/immutable/assets/fira-mono-all-400-normal.dpry7Ug7.woff",
+      "_app/immutable/assets/fira-mono-cyrillic-400-normal.N-vuOVMo.woff2",
+      "_app/immutable/assets/fira-mono-greek-ext-400-normal.rKiNtwjr.woff2",
+      "_app/immutable/assets/fira-mono-greek-400-normal.At854Oju.woff2",
+      "_app/immutable/assets/fira-mono-latin-ext-400-normal.-l34kfv6.woff2",
+      "_app/immutable/assets/fira-mono-latin-400-normal.yoy1YEIp.woff2",
+      "_app/immutable/assets/kanit-thai-400-normal.tu3gLVNW.woff2",
+      "_app/immutable/assets/kanit-thai-400-normal.B8stK5J1.woff",
+      "_app/immutable/assets/kanit-vietnamese-400-normal.3-MPwkYw.woff2",
+      "_app/immutable/assets/kanit-vietnamese-400-normal.4Bqf7zjn.woff",
+      "_app/immutable/assets/kanit-latin-ext-400-normal.ZuDjof6L.woff2",
+      "_app/immutable/assets/kanit-latin-ext-400-normal.3iJOjBjt.woff",
+      "_app/immutable/assets/kanit-latin-400-normal.tSZPiQqz.woff2",
+      "_app/immutable/assets/kanit-latin-400-normal.1yh85I4A.woff",
+      "_app/immutable/assets/poppins-latin-ext-400-normal.AiKXiRGc.woff2",
+      "_app/immutable/assets/poppins-latin-ext-400-normal.nv7lqtWR.woff",
+      "_app/immutable/assets/poppins-latin-400-normal.HKcQETrj.woff2",
+      "_app/immutable/assets/poppins-latin-400-normal.Tm9xNzdG.woff"
+    ],
+    "css": [
+      "_app/immutable/assets/0.tHIjEIt2.css"
+    ],
+    "file": "_app/immutable/nodes/0.CqoeQizA.js",
+    "imports": [
+      "_NSV_DA2K.js",
+      "_HdumK7dF.js",
+      "_tAQdEg6c.js"
+    ],
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": ".svelte-kit/generated/client-optimized/nodes/0.js"
+  },
+  ".svelte-kit/generated/client-optimized/nodes/1.js": {
+    "css": [
+      "_app/immutable/assets/1.EwdbbrKK.css"
+    ],
+    "file": "_app/immutable/nodes/1.a-cyqSRv.js",
+    "imports": [
+      "_NSV_DA2K.js",
+      "_HdumK7dF.js",
+      "_KRU0y7Nu.js",
+      "_AuggO1Wj.js"
+    ],
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": ".svelte-kit/generated/client-optimized/nodes/1.js"
+  },
+  ".svelte-kit/generated/client-optimized/nodes/2.js": {
+    "css": [
+      "_app/immutable/assets/2.quqm-cM5.css"
+    ],
+    "file": "_app/immutable/nodes/2.L3tdNnnO.js",
+    "imports": [
+      "_NSV_DA2K.js",
+      "_HdumK7dF.js",
+      "_tAQdEg6c.js",
+      "_P3hBu4d8.js",
+      "src/components/ProjectReadme.svelte",
+      "_AuggO1Wj.js"
+    ],
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": ".svelte-kit/generated/client-optimized/nodes/2.js"
+  },
+  ".svelte-kit/generated/client-optimized/nodes/3.js": {
+    "css": [
+      "_app/immutable/assets/3.su6X5RWK.css"
+    ],
+    "dynamicImports": [
+      "src/components/ProjectReadme.svelte"
+    ],
+    "file": "_app/immutable/nodes/3.wTDaldEG.js",
+    "imports": [
+      "_0HuHagjb.js",
+      "_NSV_DA2K.js",
+      "_HdumK7dF.js",
+      "_P3hBu4d8.js",
+      "_tAQdEg6c.js",
+      "_KRU0y7Nu.js",
+      "_x1IK5hzF.js",
+      "_AuggO1Wj.js"
+    ],
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": ".svelte-kit/generated/client-optimized/nodes/3.js"
+  },
+  "_!~{00e}~.js": {
+    "file": "_app/immutable/assets/ProjectReadme.e7ebC1QG.css",
+    "src": "_!~{00e}~.js"
+  },
+  "_!~{00f}~.js": {
+    "file": "_app/immutable/assets/Icon.fCVDIlbE.css",
+    "src": "_!~{00f}~.js"
+  },
+  "_0HuHagjb.js": {
+    "file": "_app/immutable/chunks/0HuHagjb.js"
+  },
+  "_AuggO1Wj.js": {
+    "file": "_app/immutable/chunks/AuggO1Wj.js"
+  },
+  "_HdumK7dF.js": {
+    "file": "_app/immutable/chunks/HdumK7dF.js",
+    "imports": [
+      "_NSV_DA2K.js"
+    ]
+  },
+  "_KRU0y7Nu.js": {
+    "file": "_app/immutable/chunks/KRU0y7Nu.js",
+    "imports": [
+      "_x1IK5hzF.js"
+    ]
+  },
+  "_NSV_DA2K.js": {
+    "file": "_app/immutable/chunks/NSV_DA2K.js"
+  },
+  "_P3hBu4d8.js": {
+    "css": [
+      "_app/immutable/assets/ProjectReadme.e7ebC1QG.css"
+    ],
+    "file": "_app/immutable/chunks/P3hBu4d8.js",
+    "imports": [
+      "_NSV_DA2K.js",
+      "_HdumK7dF.js"
+    ]
+  },
+  "_tAQdEg6c.js": {
+    "css": [
+      "_app/immutable/assets/Icon.fCVDIlbE.css"
+    ],
+    "file": "_app/immutable/chunks/tAQdEg6c.js",
+    "imports": [
+      "_NSV_DA2K.js",
+      "_HdumK7dF.js"
+    ]
+  },
+  "_x1IK5hzF.js": {
+    "file": "_app/immutable/chunks/x1IK5hzF.js",
+    "imports": [
+      "_NSV_DA2K.js"
+    ]
+  },
+  "node_modules/@fontsource/fira-mono/files/fira-mono-all-400-normal.woff": {
+    "file": "_app/immutable/assets/fira-mono-all-400-normal.dpry7Ug7.woff",
+    "src": "node_modules/@fontsource/fira-mono/files/fira-mono-all-400-normal.woff"
+  },
+  "node_modules/@fontsource/fira-mono/files/fira-mono-cyrillic-400-normal.woff2": {
+    "file": "_app/immutable/assets/fira-mono-cyrillic-400-normal.N-vuOVMo.woff2",
+    "src": "node_modules/@fontsource/fira-mono/files/fira-mono-cyrillic-400-normal.woff2"
+  },
+  "node_modules/@fontsource/fira-mono/files/fira-mono-cyrillic-ext-400-normal.woff2": {
+    "file": "_app/immutable/assets/fira-mono-cyrillic-ext-400-normal.dOGCK5uJ.woff2",
+    "src": "node_modules/@fontsource/fira-mono/files/fira-mono-cyrillic-ext-400-normal.woff2"
+  },
+  "node_modules/@fontsource/fira-mono/files/fira-mono-greek-400-normal.woff2": {
+    "file": "_app/immutable/assets/fira-mono-greek-400-normal.At854Oju.woff2",
+    "src": "node_modules/@fontsource/fira-mono/files/fira-mono-greek-400-normal.woff2"
+  },
+  "node_modules/@fontsource/fira-mono/files/fira-mono-greek-ext-400-normal.woff2": {
+    "file": "_app/immutable/assets/fira-mono-greek-ext-400-normal.rKiNtwjr.woff2",
+    "src": "node_modules/@fontsource/fira-mono/files/fira-mono-greek-ext-400-normal.woff2"
+  },
+  "node_modules/@fontsource/fira-mono/files/fira-mono-latin-400-normal.woff2": {
+    "file": "_app/immutable/assets/fira-mono-latin-400-normal.yoy1YEIp.woff2",
+    "src": "node_modules/@fontsource/fira-mono/files/fira-mono-latin-400-normal.woff2"
+  },
+  "node_modules/@fontsource/fira-mono/files/fira-mono-latin-ext-400-normal.woff2": {
+    "file": "_app/immutable/assets/fira-mono-latin-ext-400-normal.-l34kfv6.woff2",
+    "src": "node_modules/@fontsource/fira-mono/files/fira-mono-latin-ext-400-normal.woff2"
+  },
+  "node_modules/@fontsource/kanit/files/kanit-latin-400-normal.woff": {
+    "file": "_app/immutable/assets/kanit-latin-400-normal.1yh85I4A.woff",
+    "src": "node_modules/@fontsource/kanit/files/kanit-latin-400-normal.woff"
+  },
+  "node_modules/@fontsource/kanit/files/kanit-latin-400-normal.woff2": {
+    "file": "_app/immutable/assets/kanit-latin-400-normal.tSZPiQqz.woff2",
+    "src": "node_modules/@fontsource/kanit/files/kanit-latin-400-normal.woff2"
+  },
+  "node_modules/@fontsource/kanit/files/kanit-latin-ext-400-normal.woff": {
+    "file": "_app/immutable/assets/kanit-latin-ext-400-normal.3iJOjBjt.woff",
+    "src": "node_modules/@fontsource/kanit/files/kanit-latin-ext-400-normal.woff"
+  },
+  "node_modules/@fontsource/kanit/files/kanit-latin-ext-400-normal.woff2": {
+    "file": "_app/immutable/assets/kanit-latin-ext-400-normal.ZuDjof6L.woff2",
+    "src": "node_modules/@fontsource/kanit/files/kanit-latin-ext-400-normal.woff2"
+  },
+  "node_modules/@fontsource/kanit/files/kanit-thai-400-normal.woff": {
+    "file": "_app/immutable/assets/kanit-thai-400-normal.B8stK5J1.woff",
+    "src": "node_modules/@fontsource/kanit/files/kanit-thai-400-normal.woff"
+  },
+  "node_modules/@fontsource/kanit/files/kanit-thai-400-normal.woff2": {
+    "file": "_app/immutable/assets/kanit-thai-400-normal.tu3gLVNW.woff2",
+    "src": "node_modules/@fontsource/kanit/files/kanit-thai-400-normal.woff2"
+  },
+  "node_modules/@fontsource/kanit/files/kanit-vietnamese-400-normal.woff": {
+    "file": "_app/immutable/assets/kanit-vietnamese-400-normal.4Bqf7zjn.woff",
+    "src": "node_modules/@fontsource/kanit/files/kanit-vietnamese-400-normal.woff"
+  },
+  "node_modules/@fontsource/kanit/files/kanit-vietnamese-400-normal.woff2": {
+    "file": "_app/immutable/assets/kanit-vietnamese-400-normal.3-MPwkYw.woff2",
+    "src": "node_modules/@fontsource/kanit/files/kanit-vietnamese-400-normal.woff2"
+  },
+  "node_modules/@fontsource/poppins/files/poppins-latin-400-normal.woff": {
+    "file": "_app/immutable/assets/poppins-latin-400-normal.Tm9xNzdG.woff",
+    "src": "node_modules/@fontsource/poppins/files/poppins-latin-400-normal.woff"
+  },
+  "node_modules/@fontsource/poppins/files/poppins-latin-400-normal.woff2": {
+    "file": "_app/immutable/assets/poppins-latin-400-normal.HKcQETrj.woff2",
+    "src": "node_modules/@fontsource/poppins/files/poppins-latin-400-normal.woff2"
+  },
+  "node_modules/@fontsource/poppins/files/poppins-latin-ext-400-normal.woff": {
+    "file": "_app/immutable/assets/poppins-latin-ext-400-normal.nv7lqtWR.woff",
+    "src": "node_modules/@fontsource/poppins/files/poppins-latin-ext-400-normal.woff"
+  },
+  "node_modules/@fontsource/poppins/files/poppins-latin-ext-400-normal.woff2": {
+    "file": "_app/immutable/assets/poppins-latin-ext-400-normal.AiKXiRGc.woff2",
+    "src": "node_modules/@fontsource/poppins/files/poppins-latin-ext-400-normal.woff2"
+  },
+  "node_modules/@sveltejs/kit/src/runtime/client/entry.js": {
+    "file": "_app/immutable/entry/start.IdfH7dOm.js",
+    "imports": [
+      "_x1IK5hzF.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/@sveltejs/kit/src/runtime/client/entry.js"
+  },
+  "src/components/ProjectReadme.svelte": {
+    "file": "_app/immutable/chunks/4AjdUs8x.js",
+    "imports": [
+      "_NSV_DA2K.js",
+      "_HdumK7dF.js",
+      "_P3hBu4d8.js",
+      "_tAQdEg6c.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/components/ProjectReadme.svelte"
+  }
+}
