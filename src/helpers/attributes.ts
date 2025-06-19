@@ -86,5 +86,6 @@ export const convertGhResponse = (ghRepoData: GitHubRepository): Project => {
     issues: ghRepoData.open_issues_count,
     topics: ghRepoData.topics || [],
     archived: ghRepoData.archived,
+    has_pages: ghRepoData.has_pages || false,
   }
 };

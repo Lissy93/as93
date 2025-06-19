@@ -23,6 +23,8 @@ export interface Project {
   title?: string;
   icon?: string;
   emoji?: string;
+  has_pages?: boolean;
+
 }
 
 export interface Mirror {

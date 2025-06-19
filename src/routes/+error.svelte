@@ -2,31 +2,39 @@
   import { page } from '$app/stores';
   import { onMount } from 'svelte';
   import config from '../config';
+  import { fetchRepoDetails, findRepoMeta } from './../helpers/fetchRepo';
+	import type { Project } from '../types/Project';
+	import ProjectHero from '../components/ProjectHero.svelte';
 
-  // guard against infinite loops
-  let triedRedirect = false;
+  let gitHubPagesUrl = '';
+
+  export let data: { repoDetails: Project, readme: string, meta: any };
+
+  const reload = (url: string) => {
+    window.location.replace(url);
+  };
 
   onMount(async () => {
     // only for genuine 500s on a top-level slug
-    if ($page.status === 500 && !triedRedirect) {
+    if ($page.status === 500) {
       const parts = $page.url.pathname.split('/').filter(Boolean);
       const repo = parts[0];
 
       if (repo) {
-        triedRedirect = true;
-
-        try {
-          const res = await fetch(`https://api.github.com/repos/${config.githubUser}/${repo}`);
-          if (res.ok) {
-            const json = await res.json();
-            if (json.has_pages) {
-              // force the browser to re-load from GitHub Pages
-              window.location.replace(`https://${config.githubUser}.github.io/${repo}/`);
+        fetchRepoDetails(config.githubUser, $page.params.repo, fetch)
+          .then((res) => {
+            if (res && res?.id) {
+              data.repoDetails = res as Project;
+              data.meta = findRepoMeta(repo, config.projects) || {};
+              console.log(data.repoDetails)
+              if (data.repoDetails.has_pages) {
+                gitHubPagesUrl = `https://${config.githubUser}.github.io/${repo}/`;
+              }
             }
-          }
-        } catch {
-          // network error or rate-limit; just show your error page
-        }
+          })
+          .catch((err) => {
+            console.error('Error fetching repo details', err);
+          });
       }
     }
   });
@@ -37,14 +45,24 @@
   <meta name="description" content="AS93 - Free & Open Source apps by Alicia Sykes" />
 </svelte:head>
 
-<p>Oops, something’s gone a bit wrong here</p>
+{#if gitHubPagesUrl}
+<a href="{gitHubPagesUrl}" class="has-github-pages" on:click="{() => reload(gitHubPagesUrl)}" >
+  <h3>This page has a GitHub Pages site. Click to redirect.</h3>
+</a>
+{/if}
+
+{#if data.repoDetails && data.repoDetails.id}
+  <ProjectHero project={data.repoDetails} meta={data.meta} />
+{/if}
+
+<p>Oops, something's gone a bit wrong here</p>
 <h1>{$page.status}</h1>
 <p class="emoji">😢</p>
 {#if $page?.error?.message}
   <p>{$page.error.message}</p>
 {/if}
 
-<style>
+<style lang="scss">
 h1 {
   font-size: 6rem;
   margin: 0;
@@ -59,7 +77,22 @@ h1 {
 p {
   font-size: 2rem;
   margin: 0;
-  
   text-align: center;
+}
+
+.has-github-pages {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: var(--primary);
+  padding: 0.25rem;
+  text-align: center;
+  font-size: 1.2rem;
+  h3 {
+    margin: 0;
+    font-size: 1rem;
+  }
 }
 </style>
