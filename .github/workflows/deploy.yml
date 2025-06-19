@@ -23,6 +23,9 @@ jobs:
       - name: Install deps
         run: yarn install --frozen-lockfile
 
+      - name: Sync SvelteKit (generate .svelte-kit)
+        run: yarn svelte-kit sync
+
       - name: Build site
         env:
           IS_STATIC: true
