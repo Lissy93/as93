@@ -16,27 +16,26 @@
 
   onMount(async () => {
     // only for genuine 500s on a top-level slug
-    if ($page.status === 500) {
-      const parts = $page.url.pathname.split('/').filter(Boolean);
-      const repo = parts[0];
-
-      if (repo) {
-        fetchRepoDetails(config.githubUser, $page.params.repo, fetch)
-          .then((res) => {
-            if (res && res?.id) {
-              data.repoDetails = res as Project;
-              data.meta = findRepoMeta(repo, config.projects) || {};
-              console.log(data.repoDetails)
-              if (data.repoDetails.has_pages) {
-                gitHubPagesUrl = `https://${config.githubUser}.github.io/${repo}/`;
-              }
+    
+    const parts = $page.url.pathname.split('/').filter(Boolean);
+    const repo = parts[0];
+    if (repo) {
+      fetchRepoDetails(config.githubUser, repo, fetch)
+        .then((res) => {
+          if (res && res?.id) {
+            data.repoDetails = res as Project;
+            data.meta = findRepoMeta(repo, config.projects) || {};
+            console.log(data.repoDetails)
+            if (data.repoDetails.has_pages) {
+              gitHubPagesUrl = `https://${config.githubUser}.github.io/${repo}/`;
             }
-          })
-          .catch((err) => {
-            console.error('Error fetching repo details', err);
-          });
-      }
+          }
+        })
+        .catch((err) => {
+          console.error('Error fetching repo details', err);
+        });
     }
+    
   });
 </script>
 

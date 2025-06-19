@@ -23,12 +23,8 @@ async function getGithubSlugs() {
 
 const githubSlugs = await getGithubSlugs();
 
-console.log(githubSlugs)
-
-
 if (isStatic && githubSlugs.length === 0) {
-	console.log('ffs')
-	// throw new Error('⚠️ No GitHub slugs found. Ensure GITHUB_TOKEN is set and has access to public repos.');
+	throw new Error('⚠️ No GitHub slugs found. Ensure GITHUB_TOKEN is set and has access to public repos.');
 }
 
 /** @type {import('@sveltejs/kit').Config} */
