@@ -23,6 +23,10 @@ async function getGithubSlugs() {
 
 const githubSlugs = await getGithubSlugs();
 
+if (isStatic && githubSlugs.length === 0) {
+	throw new Error('⚠️ No GitHub slugs found. Ensure GITHUB_TOKEN is set and has access to public repos.');
+}
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess: vitePreprocess(),
